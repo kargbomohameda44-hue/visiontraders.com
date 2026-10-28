@@ -4,8 +4,8 @@
   2. Replace SUPABASE_URL and SUPABASE_ANON_KEY below with Project URL and publishable/anon key.
   3. Never add a service_role key to browser code.
 */
-const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
-const SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
+const SUPABASE_URL = "https://lygmrlocadytzuvysqpb.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_KSiSFXbJwgWFKlFL-2XD8Q_-Qal6m_0";
 
 let supabaseClient = null;
 if (window.supabase && SUPABASE_URL.startsWith("https://") && !SUPABASE_ANON_KEY.startsWith("PASTE_")) {
