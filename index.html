@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c7a55">
+  <title>VisionTraders | Investor Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">V</span><span>Vision<span class="accent">Traders</span><small>INVESTOR PORTAL</small></span></a>
+    <button id="menuButton" class="menu-button" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#account">Account</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A clearer view of your account</p>
+        <h1>Manage your crypto activity with <span class="accent">confidence.</span></h1>
+        <p class="lead">Track submitted deposits, account activity, task progress, referrals and withdrawal requests from one simple dashboard.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#account">Create account / Sign in</a>
+          <a class="button secondary" href="#how">How it works</a>
+        </div>
+        <p class="notice">Investment returns are variable and not guaranteed. Only verified, lawful profits should ever be distributed.</p>
+      </div>
+      <div class="preview-card">
+        <div class="preview-head"><span>ACCOUNT OVERVIEW</span><span class="status-dot">● Demo</span></div>
+        <p class="muted">Available balance</p>
+        <h2>$0.00 <small>USD</small></h2>
+        <div class="preview-grid">
+          <div><span>Deposits pending</span><strong>0</strong></div>
+          <div><span>Withdrawals pending</span><strong>0</strong></div>
+          <div><span>Completed tasks</span><strong>0</strong></div>
+          <div><span>Referral rewards</span><strong>$0.00</strong></div>
+        </div>
+        <p class="muted small">Sample display only. Connect Supabase and verify transactions before using with real users.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <p class="eyebrow">Platform features</p>
+      <h2>Everything organized in one place</h2>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-icon">↗</span><h3>Deposit requests</h3><p>Submit USDT TRC20 transaction details and proof of payment for manual review.</p></article>
+        <article class="feature"><span class="feature-icon">◎</span><h3>Account dashboard</h3><p>View approved transactions, activity history and your account status.</p></article>
+        <article class="feature"><span class="feature-icon">⇄</span><h3>Withdrawal requests</h3><p>Request a withdrawal and see its status after eligibility and compliance checks.</p></article>
+        <article class="feature"><span class="feature-icon">★</span><h3>Tasks and referrals</h3><p>Track task completion and eligible referral rewards with clear rules.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="section steps-section">
+      <p class="eyebrow">Simple workflow</p><h2>How it works</h2>
+      <div class="steps">
+        <div><b>01</b><h3>Create an account</h3><p>Register with an email and a strong password.</p></div>
+        <div><b>02</b><h3>Submit a request</h3><p>Enter transaction details and upload payment evidence.</p></div>
+        <div><b>03</b><h3>Wait for review</h3><p>An authorized administrator verifies the blockchain transaction before crediting an account.</p></div>
+      </div>
+    </section>
+
+    <section id="account" class="section account-section">
+      <div>
+        <p class="eyebrow">Your account</p>
+        <h2>Sign in or create an account</h2>
+        <p class="muted">Authentication is ready to connect to Supabase. Add your project settings in <code>app.js</code> before using this with real users.</p>
+        <div class="security-note"><strong>Security note</strong><p>Never put a Supabase service-role key, wallet seed phrase or private key in this website. Use the public anon key only; protect data with Row Level Security policies.</p></div>
+      </div>
+      <div class="auth-card">
+        <div class="tabs"><button class="tab active" data-tab="signup">Create account</button><button class="tab" data-tab="signin">Sign in</button></div>
+        <form id="authForm">
+          <label for="email">Email address</label><input id="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <label for="password">Password</label><input id="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters">
+          <button class="button primary full" id="authSubmit" type="submit">Create account</button>
+          <p id="authMessage" class="form-message" role="status"></p>
+        </form>
+        <p class="small muted">For a live launch, enable email verification and configure allowed redirect URLs in Supabase.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span>Vision<span class="accent">Traders</span><small>INVESTOR PORTAL</small></span></a><p>© <span id="year"></span> VisionTraders. Digital asset transactions carry risk. No return is guaranteed.</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
